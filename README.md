@@ -208,7 +208,7 @@ metadata = var.metadata
 ### terraform.tfvars
 
 metadata = {
-  ssh-keys = "ubuntu:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINwDlw8SPFFvDWxzyZiThG/2COif0auGHXVu7C93VzK7 den@rmq01"
+  ssh-keys = "ubuntu:ssh-ed25519 ******************** den@rmq01"
 }
 
 
