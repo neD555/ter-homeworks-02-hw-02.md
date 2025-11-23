@@ -102,6 +102,18 @@ vm_web_nat
 
 terraform validate -OK
 
-terraform plan
+terraform plan.
+
+### Задание 3.
+
+Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
+
+Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: "netology-develop-platform-db" , cores  = 2, memory = 2, core_fraction = 20. Объявите её переменные с префиксом vm_db_ в том же файле ('vms_platform.tf'). ВМ должна работать в зоне "ru-central1-b"
+
+Примените изменения.
+
+
+
+
 
 
