@@ -162,6 +162,53 @@ metadata = {
 
 4.Проверьте terraform plan. Изменений быть не должно.
 
+vms_platform.tf
+
+variable "vms_resources" {
+  type = map(object({
+    cores         = number
+    memory        = number
+    core_fraction = number
+  }))
+
+  default = {
+    web = {
+      cores         = 2
+      memory        = 2
+      core_fraction = 5
+    }
+    db = {
+      cores         = 2
+      memory        = 2
+      core_fraction = 20
+    }
+  }
+}
+
+variables.tf
+# variable "vms_ssh_public_root_key" {
+#   type = string
+# }
+
+variable "metadata" {
+  type = map(string)
+}
+
+main.tf
+
+resources {
+  cores         = var.vms_resources["web"].cores
+  memory        = var.vms_resources["web"].memory
+  core_fraction = var.vms_resources["web"].core_fraction
+}
+
+metadata = var.metadata
+
+terraform.tfvars
+
+metadata = {
+  ssh-keys = "ubuntu:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINwDlw8SPFFvDWxzyZiThG/2COif0auGHXVu7C93VzK7 den@rmq01"
+}
 
 
 
