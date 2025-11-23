@@ -65,3 +65,43 @@ core_fraction = 5
 
 – подходит для малых задач, демо, лабораторных
 
+### Задание 2.
+Замените все хардкод-значения для ресурсов yandex_compute_image и yandex_compute_instance на отдельные переменные. К названиям переменных ВМ добавьте в начало префикс vm_web_ . Пример: vm_web_name.
+
+Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их default прежними значениями из main.tf.
+
+Проверьте terraform plan. Изменений быть не должно.
+
+### Ответ.
+
+Вынесены все константные значения ресурса yandex_compute_instance.vm1 в переменные с префиксом vm_web_:
+
+vm_web_name
+
+vm_web_platform_id
+
+vm_web_zone
+
+vm_web_cores
+
+vm_web_memory
+
+vm_web_core_fraction
+
+vm_web_preemptible
+
+vm_web_image_id
+
+vm_web_nat
+
+Каждой переменной указан type и default, равный прежнему хардкод-значению из main.tf.
+
+В main.tf ресурс yandex_compute_instance.vm1 теперь использует переменные var.vm_web_* вместо прямых значений.
+
+После изменений выполнено:
+
+terraform validate -OK
+
+terraform plan
+
+
