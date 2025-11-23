@@ -1,0 +1,17 @@
+output "vms_info" {
+  description = "Names, external IPs and FQDNs of all VMs"
+
+  value = {
+    vm_web = {
+      name        = yandex_compute_instance.vm_web.name
+      external_ip = yandex_compute_instance.vm_web.network_interface[0].nat_ip_address
+      fqdn        = yandex_compute_instance.vm_web.fqdn
+    }
+
+    vm_db = {
+      name        = yandex_compute_instance.vm_db.name
+      external_ip = yandex_compute_instance.vm_db.network_interface[0].nat_ip_address
+      fqdn        = yandex_compute_instance.vm_db.fqdn
+    }
+  }
+}
