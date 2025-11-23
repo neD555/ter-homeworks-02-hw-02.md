@@ -45,4 +45,23 @@
 
 ### Ответ.
 
+<img width="649" height="608" alt="Задание 1(1)" src="https://github.com/user-attachments/assets/6082162a-a329-4541-90f9-c5168c1719b2" />
+
+<img width="1480" height="790" alt="Задание 1(2)" src="https://github.com/user-attachments/assets/3ef42202-5c2e-42c8-aa77-d2c10dd75523" />
+
+preemptible = true
+
+– очень дешёвая ВМ
+
+– может быть остановлена облаком
+
+– идеальна для обучения, лабораторных, тестов
+
+core_fraction = 5
+
+– ядро CPU работает с нагрузкой 5%
+
+– ВМ стоит минимально
+
+– подходит для малых задач, демо, лабораторных
 
